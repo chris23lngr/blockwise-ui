@@ -21,6 +21,7 @@ const Section = React.forwardRef<
     </section>
   );
 });
+Section.displayName = 'Section';
 /** -----------------------------------------------------------------
  *  ContentSidebar
  *  -----------------------------------------------------------------*/

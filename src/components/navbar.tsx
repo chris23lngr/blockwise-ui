@@ -38,6 +38,7 @@ const Navbar = React.forwardRef<
     </div>
   );
 });
+Navbar.displayName = 'Navbar';
 
 /** -----------------------------------------------------------------
  *  NavbarButton
