@@ -43,7 +43,7 @@ const Footer = React.forwardRef<
         </Link>
         <CircleIcon className="h-2 w-2 fill-zinc-300 text-zinc-300" />
         <Link
-          href={`${siteConfig.repository.url}/blob/main/LICENSE`}
+          href={`${siteConfig.repository.url}/blob/master/LICENSE`}
           target="_blank"
           className="text-sm font-medium text-zinc-700 transition-colors hover:text-lime-500"
         >

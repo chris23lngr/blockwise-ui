@@ -30,6 +30,7 @@ const Navbar = React.forwardRef<
       <div className="h-5 w-px bg-zinc-200" />
       <Link
         href={siteConfig.repository.url}
+        target="_blank"
         className="block rounded-full p-1.5 transition-colors hover:bg-zinc-100"
       >
         <GithubLogo className="h-4 w-4 fill-zinc-700" />
