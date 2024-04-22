@@ -9,7 +9,7 @@ export default async function Home() {
       {Object.entries(Index).map(([key, value]) => {
         const Component = value.component;
         return (
-          <CD.Section>
+          <CD.Section key={value.name}>
             <CD.ContentSidebar>
               <CD.Title>{value.title}</CD.Title>
               <CD.Description>{value.description}</CD.Description>
