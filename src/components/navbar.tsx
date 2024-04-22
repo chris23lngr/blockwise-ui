@@ -1,5 +1,8 @@
+import { siteConfig } from '@/lib/config/site';
 import { cn } from '@/lib/utils';
+import { cva } from 'class-variance-authority';
 import { PlusIcon, SearchIcon } from 'lucide-react';
+import Link from 'next/link';
 import React from 'react';
 import { GithubLogo } from './logos/github';
 
@@ -25,11 +28,38 @@ const Navbar = React.forwardRef<
         <PlusIcon className="h-4 w-4 text-zinc-700" />
       </button>
       <div className="h-5 w-px bg-zinc-200" />
-      <button className="block rounded-full p-1.5 transition-colors hover:bg-zinc-100">
+      <Link
+        href={siteConfig.repository.url}
+        className="block rounded-full p-1.5 transition-colors hover:bg-zinc-100"
+      >
         <GithubLogo className="h-4 w-4 fill-zinc-700" />
-      </button>
+      </Link>
     </div>
   );
 });
+
+/** -----------------------------------------------------------------
+ *  NavbarButton
+ *  -----------------------------------------------------------------*/
+
+const navbarButtonVariants = cva(
+  'block rounded-full p-1.5 text-zinc-700 transition-colors hover:bg-zinc-100'
+);
+
+const NavbarButton = React.forwardRef<
+  HTMLButtonElement,
+  React.ButtonHTMLAttributes<HTMLButtonElement>
+>((props, ref) => {
+  const { className, ...rest } = props;
+
+  return (
+    <button
+      ref={ref}
+      {...rest}
+      className={cn(navbarButtonVariants({}), className)}
+    />
+  );
+});
+NavbarButton.displayName = 'NavbarButton';
 
 export { Navbar };

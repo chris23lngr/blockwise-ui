@@ -1,3 +1,4 @@
+import { siteConfig } from '@/lib/config/site';
 import { cn } from '@/lib/utils';
 import { CircleIcon } from 'lucide-react';
 import Link from 'next/link';
@@ -34,7 +35,7 @@ const Footer = React.forwardRef<
         </p>
         <CircleIcon className="h-2 w-2 fill-zinc-300 text-zinc-300" />
         <Link
-          href={'https://www.uilabs.dev/'}
+          href={siteConfig.repository.url}
           target="_blank"
           className="text-sm font-medium text-zinc-700 transition-colors hover:text-lime-500"
         >
@@ -42,7 +43,7 @@ const Footer = React.forwardRef<
         </Link>
         <CircleIcon className="h-2 w-2 fill-zinc-300 text-zinc-300" />
         <Link
-          href={'https://www.uilabs.dev/'}
+          href={`${siteConfig.repository.url}/blob/main/LICENSE`}
           target="_blank"
           className="text-sm font-medium text-zinc-700 transition-colors hover:text-lime-500"
         >
