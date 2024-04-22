@@ -13,13 +13,15 @@ export default async function Home() {
             <CD.ContentSidebar>
               <CD.Title>{value.title}</CD.Title>
               <CD.Description>{value.description}</CD.Description>
-              <CD.DependencyList>
-                {value.dependencies.map((dependency) => (
-                  <CD.Dependency key={dependency.name} href={dependency.url}>
-                    {dependency.name}
-                  </CD.Dependency>
-                ))}
-              </CD.DependencyList>
+              {value.dependencies.length > 0 && (
+                <CD.DependencyList>
+                  {value.dependencies.map((dependency) => (
+                    <CD.Dependency key={dependency.name} href={dependency.url}>
+                      {dependency.name}
+                    </CD.Dependency>
+                  ))}
+                </CD.DependencyList>
+              )}
             </CD.ContentSidebar>
             <CD.PreviewWrapper>
               <Component />
