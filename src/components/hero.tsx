@@ -1,9 +1,9 @@
 import { siteConfig } from '@/lib/config/site';
 import { cn } from '@/lib/utils';
+import { Button, buttonVariants } from '@/registry/ui/button';
 import Link from 'next/link';
 import React from 'react';
 import { GithubLogo } from './logos/github';
-import { Button, buttonVariants } from './ui/button';
 
 // TODO: Add component previews below the header
 

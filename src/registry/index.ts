@@ -12,4 +12,22 @@ export const index: Registry = {
       },
     ],
   },
+  input: {
+    name: 'input',
+    title: 'Input',
+    description:
+      'Input component for forms and more. This is a simple input component.',
+    dependencies: [
+      {
+        name: '@tailwindcss/forms',
+        url: 'https://github.com/tailwindlabs/tailwindcss-forms',
+      },
+    ],
+  },
+  terminal: {
+    name: 'terminal',
+    title: 'Terminal',
+    description: 'Terminal component for displaying command line interfaces.',
+    dependencies: [],
+  },
 };
