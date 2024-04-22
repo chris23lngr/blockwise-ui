@@ -17,3 +17,10 @@ export type RegistryEntry = z.infer<typeof registryEntry>;
 
 export const registry = z.record(registryEntry);
 export type Registry = z.infer<typeof registry>;
+
+export const componentEntr = registryEntry.extend({
+  component: z.lazy(() => z.any()),
+  codeString: z.string(),
+});
+
+export type ComponentEntry = z.infer<typeof componentEntr>;

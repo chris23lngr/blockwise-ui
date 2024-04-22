@@ -69,7 +69,7 @@ Description.displayName = 'Description';
 /** -----------------------------------------------------------------
  *  DependencyList
  *  -----------------------------------------------------------------*/
-const DenpendencyList = React.forwardRef<
+const DependencyList = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
@@ -84,17 +84,17 @@ const DenpendencyList = React.forwardRef<
     </div>
   );
 });
-DenpendencyList.displayName = 'DenpendencyList';
+DependencyList.displayName = 'DependencyList';
 
 /** -----------------------------------------------------------------
  *  Dependency
  *  -----------------------------------------------------------------*/
-interface DenpendencyProps
+interface DependencyProps
   extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'href'> {
   href: string;
 }
 
-const Denpendency = React.forwardRef<HTMLAnchorElement, DenpendencyProps>(
+const Dependency = React.forwardRef<HTMLAnchorElement, DependencyProps>(
   (props, ref) => {
     const { className, ...rest } = props;
 
@@ -107,7 +107,7 @@ const Denpendency = React.forwardRef<HTMLAnchorElement, DenpendencyProps>(
     );
   }
 );
-Denpendency.displayName = 'Denpendency';
+Dependency.displayName = 'Dependency';
 
 /** -----------------------------------------------------------------
  *  PreviewWrapper
@@ -134,8 +134,8 @@ PreviewWrapper.displayName = 'PreviewWrapper';
 
 export {
   ContentSidebar,
-  Denpendency,
-  DenpendencyList,
+  Dependency,
+  DependencyList,
   Description,
   PreviewWrapper,
   Section,
