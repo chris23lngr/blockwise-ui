@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:registry": "tsx ./scripts/build-registry.ts && prettier --write ./src/__registry__/index.tsx",
     "start": "next start",
     "lint": "next lint"
   },
@@ -16,7 +17,9 @@
     "next": "14.2.2",
     "react": "^18",
     "react-dom": "^18",
-    "tailwind-merge": "^2.3.0"
+    "tailwind-merge": "^2.3.0",
+    "tsx": "^4.7.2",
+    "zod": "^3.23.0"
   },
   "devDependencies": {
     "@types/node": "^20",
