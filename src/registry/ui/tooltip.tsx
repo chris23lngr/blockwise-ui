@@ -25,7 +25,7 @@ const Content = React.forwardRef<HTMLDivElement, ContentProps>((props, ref) => {
       sideOffset={8}
       avoidCollisions={true}
       className={cn(
-        'text-zinc-90 opacity-1000 z-40 rounded-full border border-zinc-200 bg-white px-3 py-1.5 text-sm font-medium text-zinc-900 shadow-sm',
+        'text-zinc-90 opacity-1000 text-foreground bg-background border-border z-40 rounded-full border px-3 py-1.5 text-sm font-medium shadow-sm',
         className
       )}
     />

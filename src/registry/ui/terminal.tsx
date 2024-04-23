@@ -54,11 +54,11 @@ const Root = React.forwardRef<
         ref={ref}
         {...rest}
         className={cn(
-          'w-full max-w-xl rounded-xl border border-zinc-200 bg-zinc-50 p-1',
+          'w-full max-w-xl rounded-xl border border-border bg-ring-detail p-1',
           className
         )}
       >
-        <div className="w-full overflow-hidden rounded-lg border border-zinc-200">
+        <div className="w-full overflow-hidden rounded-lg border border-border">
           {children}
         </div>
       </div>
@@ -81,12 +81,12 @@ const Header = React.forwardRef<
       ref={ref}
       {...rest}
       className={cn(
-        'flex items-center justify-start border-b border-inherit bg-zinc-100 py-1.5 pl-4 pr-2.5',
+        'flex items-center justify-start border-b border-inherit bg-ring-detail py-1.5 pl-4 pr-2.5',
         className
       )}
     >
-      <TerminalIcon className="h-4 w-4 text-zinc-700" />
-      <p className="ms-2 text-sm font-medium text-zinc-500">Terminal</p>
+      <TerminalIcon className="h-4 w-4 text-muted" />
+      <p className="ms-2 text-sm font-medium text-muted-foreground">Terminal</p>
       {children}
     </div>
   );
@@ -132,7 +132,7 @@ const CopyButton = React.forwardRef<HTMLButtonElement, CopyButtonProps>(
         {...rest}
         data-copied={copied}
         className={cn(
-          'group ml-auto rounded-md p-1.5 text-zinc-500 transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-100',
+          'group ml-auto rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 focus-visible:ring-offset-2 focus-visible:ring-offset-ring-detail',
           className
         )}
         onClick={handleCopy}
@@ -167,7 +167,7 @@ const Content = React.forwardRef<HTMLDivElement, ContentProps>((props, ref) => {
     <div
       ref={ref}
       {...rest}
-      className={cn('overflow-x-auto bg-white px-4 py-4', className)}
+      className={cn('overflow-x-auto bg-background px-4 py-4', className)}
     >
       <SyntaxHighlighter language="bash" style={TerminalStyle}>
         {codeString}

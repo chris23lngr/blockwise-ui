@@ -35,4 +35,10 @@ export const index: Registry = {
       },
     ],
   },
+  badge: {
+    name: 'badge',
+    title: 'Badge',
+    description: 'Badge component for displaying status or notifications.',
+    dependencies: [],
+  },
 };

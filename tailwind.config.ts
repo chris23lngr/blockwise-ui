@@ -7,6 +7,7 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/registry/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     container: {
       center: true,
@@ -16,6 +17,14 @@ const config: Config = {
       },
     },
     extend: {
+      colors: {
+        background: 'hsla(var(--background))',
+        border: 'hsla(var(--border))',
+        foreground: 'hsla(var(--foreground))',
+        muted: 'hsla(var(--muted))',
+        'muted-foreground': 'hsla(var(--muted-foreground))',
+        'ring-detail': 'hsla(var(--ring-detail))',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
