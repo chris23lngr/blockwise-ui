@@ -6,6 +6,7 @@ import '@/styles/globals.css';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata, Viewport } from 'next';
+import { ThemeProvider } from 'next-themes';
 import { Inter } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -55,22 +56,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={cn('relative', inter.className)}>
+    <html lang="en" suppressHydrationWarning className="bg-background">
+      <body className={cn('relative bg-background', inter.className)}>
         {/* Background Grid */}
         <div className="container absolute left-1/2 top-0 z-0 h-full -translate-x-1/2 ">
           <div className="absolute left-0 top-0 z-0 grid h-full w-full grid-cols-2 px-8 md:grid-cols-4 lg:grid-cols-6">
-            <div className="h-full w-full border-l border-dashed border-zinc-200" />
-            <div className="hidden h-full w-full border-l border-dashed border-zinc-200 lg:block" />
-            <div className="hidden h-full w-full border-l border-dashed border-zinc-200 lg:block" />
-            <div className="hidden h-full w-full border-l border-dashed border-zinc-200 md:block" />
-            <div className="hidden h-full w-full border-l border-dashed border-zinc-200 md:block" />
-            <div className="h-full w-full border-x border-dashed border-zinc-200" />
+            <div className="h-full w-full border-l border-dashed border-border" />
+            <div className="hidden h-full w-full border-l border-dashed border-border lg:block" />
+            <div className="hidden h-full w-full border-l border-dashed border-border lg:block" />
+            <div className="hidden h-full w-full border-l border-dashed border-border md:block" />
+            <div className="hidden h-full w-full border-l border-dashed border-border md:block" />
+            <div className="h-full w-full border-x border-dashed border-border" />
           </div>
         </div>
-        <Navbar />
-        {children}
-        <Footer />
+        <ThemeProvider attribute="class">
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
         <Analytics />
         <SpeedInsights />
       </body>

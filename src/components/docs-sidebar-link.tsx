@@ -24,7 +24,7 @@ const DocsSidebarLink = React.forwardRef<
       {...rest}
       data-active={pathname === props.href ? 'true' : 'false'}
       className={cn(
-        'text-sm text-zinc-500 data-[active=true]:font-medium data-[active=true]:text-zinc-900',
+        'data-[active=true]:text-foreground text-muted-foreground text-sm data-[active=true]:font-medium',
         className
       )}
     />

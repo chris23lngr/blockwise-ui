@@ -7,7 +7,7 @@ export default async function Layout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="relative z-10 bg-white">
+    <main className="bg-background relative z-10">
       <section className="py-32">
         <div className="container flex ">
           <DocsSidebar />

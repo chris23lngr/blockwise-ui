@@ -13,9 +13,8 @@ const Footer = React.forwardRef<
   return (
     <footer ref={ref} {...rest} className={cn('', className)}>
       <div className="container relative flex flex-wrap items-center justify-center gap-4 py-8">
-        <div className="absolute left-8 top-0 h-px w-[calc(100%-4rem)] border-t border-dashed border-zinc-200"></div>
-        {/* <p className="font-mono text-sm text-zinc-700">Hello World</p> */}
-        <p className="mt-0 text-sm text-zinc-700">
+        <div className="border-border absolute left-8 top-0 h-px w-[calc(100%-4rem)] border-t border-dashed"></div>
+        <p className="text-muted-foreground mt-0 text-sm">
           Inspired by{' '}
           <Link
             href={'https://ui.shadcn.com/'}
@@ -33,19 +32,19 @@ const Footer = React.forwardRef<
             uilabs.dev
           </Link>
         </p>
-        <CircleIcon className="h-2 w-2 fill-zinc-300 text-zinc-300" />
+        <CircleIcon className="fill-muted text-muted h-2 w-2" />
         <Link
           href={siteConfig.repository.url}
           target="_blank"
-          className="text-sm font-medium text-zinc-700 transition-colors hover:text-lime-500"
+          className="text-muted-foreground text-sm font-medium transition-colors hover:text-lime-500"
         >
           Github
         </Link>
-        <CircleIcon className="h-2 w-2 fill-zinc-300 text-zinc-300" />
+        <CircleIcon className="fill-muted text-muted h-2 w-2 " />
         <Link
           href={`${siteConfig.repository.url}/blob/master/LICENSE`}
           target="_blank"
-          className="text-sm font-medium text-zinc-700 transition-colors hover:text-lime-500"
+          className="text-muted-foreground text-sm font-medium transition-colors hover:text-lime-500"
         >
           License
         </Link>

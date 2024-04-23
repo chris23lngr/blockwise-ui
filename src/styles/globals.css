@@ -1,3 +1,70 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0, 0%, 100%;
+    --border: 240, 5.88%, 90%;
+    --foreground: 240, 5.88%, 10%;
+    --muted: 240, 4.88%, 83.92%;
+    --muted-foreground: 240, 3.83%, 46.08%;
+    --ring-detail: 0, 0%, 98.04%;
+
+    /* Prism Theme */
+    --default: #65a30d; /* lime-600 */
+    --comment: #d4d4d8; /* zinc-300 */
+    --punctuation: #d4d4d8; /* zinc-300 */
+    --keyword: #71717a; /* zinc-500 */
+    --tag: #84cc16; /* lime-500 */
+    --class-name: #84cc16; /* lime-500 */
+    --attr-name: #71717a; /* zinc-500 */
+    --string: #14b8a6; /* teal-500 */
+    --builtin: #71717a; /* zinc-500 */
+    --operator: #71717a; /* zinc-500 */
+    --function: #71717a; /* zinc-500 */
+    --prolog: #ff0000;
+    --doctype: #ff0000;
+    --cdata: #ff0000;
+    --namespace: #f81717;
+    --property: #ff0000;
+    --boolean: #ff0000;
+    --constant: #ff0000;
+    --symbol: #ff0000;
+    --deleted: #ff0000;
+    --number: #ff0000;
+    --selector: #ff0000;
+    --char: #ff0000;
+    --inserted: #ff0000;
+    --variable: #ff0000;
+    --entity: #ff0000;
+    --url: #ff0000;
+    --token-string: #ff0000;
+    --atrule: #ff0000;
+    --attr-value: #ff0000;
+    --regex: #ff0000;
+    --important: #ff0000;
+  }
+
+  .dark {
+    --background: 240, 5.88%, 10%;
+    --border: 240, 5.26%, 26.08%;
+    --foreground: 0, 0%, 100%;
+    --muted: 240, 3.83%, 46.08%;
+    --muted-foreground: 240, 4.88%, 83.92%;
+    --ring-detail: 240, 3.7%, 15.88%;
+
+    /* Prism Theme */
+    --default: #84cc16; /* lime-500 */
+    --comment: #52525b; /* zinc-600 */
+    --punctuation: #52525b; /* zinc-600 */
+    --keyword: #a1a1aa; /* zinc-400 */
+    --tag: #bef264; /* lime-300 */
+    --class-name: #bef264; /* lime-300 */
+    --attr-name: #a1a1aa; /* zinc-400 */
+    --string: #5eead4; /* teal-300 */
+    --builtin: #a1a1aa; /* zinc-400 */
+    --operator: #a1a1aa; /* zinc-400 */
+    --function: #a1a1aa; /* zinc-400 */
+  }
+}
