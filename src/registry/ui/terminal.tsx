@@ -161,7 +161,7 @@ const Content = React.forwardRef<HTMLDivElement, ContentProps>((props, ref) => {
 
   React.useMemo(() => {
     setCodeString(codeString);
-  }, [codeString]);
+  }, [codeString, setCodeString]);
 
   return (
     <div
