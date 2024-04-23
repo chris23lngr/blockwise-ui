@@ -3,7 +3,7 @@ const TerminalStyle: { [key: string]: React.CSSProperties } = {
     color: '#16a34a',
     background: 'none',
     fontFamily:
-      'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;',
+      'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
     textAlign: 'left',
     whiteSpace: 'pre',
     wordSpacing: 'normal',
