@@ -15,7 +15,7 @@ const Footer = React.forwardRef<
       <div className="container relative flex flex-wrap items-center justify-center gap-4 py-8">
         <div className="absolute left-8 top-0 h-px w-[calc(100%-4rem)] border-t border-dashed border-zinc-200"></div>
         {/* <p className="font-mono text-sm text-zinc-700">Hello World</p> */}
-        <p className="text-sm text-zinc-700">
+        <p className="mt-0 text-sm text-zinc-700">
           Inspired by{' '}
           <Link
             href={'https://ui.shadcn.com/'}

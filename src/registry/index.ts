@@ -28,6 +28,11 @@ export const index: Registry = {
     name: 'terminal',
     title: 'Terminal',
     description: 'Terminal component for displaying command line interfaces.',
-    dependencies: [],
+    dependencies: [
+      {
+        name: 'react-syntax-highlighter',
+        url: 'https://github.com/react-syntax-highlighter/react-syntax-highlighter',
+      },
+    ],
   },
 };

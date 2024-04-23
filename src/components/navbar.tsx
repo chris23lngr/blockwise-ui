@@ -1,7 +1,7 @@
 import { siteConfig } from '@/lib/config/site';
 import { cn } from '@/lib/utils';
 import { cva } from 'class-variance-authority';
-import { PlusIcon, SearchIcon } from 'lucide-react';
+import { BookOpenIcon, HomeIcon, PlusIcon, SearchIcon } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 import { GithubLogo } from './logos/github';
@@ -21,12 +21,24 @@ const Navbar = React.forwardRef<
         className
       )}
     >
+      <Link
+        href={`/`}
+        className="block rounded-full p-1.5 transition-colors hover:bg-zinc-100"
+      >
+        <HomeIcon className="h-4 w-4 text-zinc-700" />
+      </Link>
       <button className="block rounded-full p-1.5 transition-colors hover:bg-zinc-100">
         <SearchIcon className="h-4 w-4 text-zinc-700" />
       </button>
       <button className="block rounded-full p-1.5 transition-colors hover:bg-zinc-100">
         <PlusIcon className="h-4 w-4 text-zinc-700" />
       </button>
+      <Link
+        href={`/docs`}
+        className="block rounded-full p-1.5 transition-colors hover:bg-zinc-100"
+      >
+        <BookOpenIcon className="h-4 w-4 text-zinc-700" />
+      </Link>
       <div className="h-5 w-px bg-zinc-200" />
       <Link
         href={siteConfig.repository.url}
