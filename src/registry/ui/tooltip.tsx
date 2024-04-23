@@ -31,5 +31,6 @@ const Content = React.forwardRef<HTMLDivElement, ContentProps>((props, ref) => {
     />
   );
 });
+Content.displayName = TooltipPrimitive.Content.displayName;
 
 export { Content, Portal, Provider, Root, Trigger };
